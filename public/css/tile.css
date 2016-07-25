@@ -1,0 +1,38 @@
+.tile-container {
+	width: 152px;
+	height: 152px;
+	border: 1px solid lightgray;
+	perspective: 600px;
+}
+
+.tile-wrapper, .tile {
+	width: 150px;
+	height: 150px;
+}
+
+.tile-wrapper {
+	transition: .4s;
+	transform-style: preserve-3d;
+}
+
+.tile-wrapper.flipped-right {
+	transform: rotateY(180deg);
+}
+
+.tile-wrapper.flipped-left {
+	transform: rotateY(-180deg);
+}
+
+.tile {
+	backface-visibility: hidden;
+	position: absolute;
+}
+
+.tile.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.tile.back {
+	transform: rotateY(180deg);
+}

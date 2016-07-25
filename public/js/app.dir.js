@@ -2,8 +2,9 @@ angular.module('app')
 .directive('app', function($http, api, dataModel) {
   return {
     restrict: 'E',
-    replace: true,
     templateUrl: 'js/app.html',
+    replace: true,
+		scope: true,
     link: function(scope, element, attrs) {
 
       scope.dm = dataModel;
