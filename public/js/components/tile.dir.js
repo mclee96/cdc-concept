@@ -6,7 +6,8 @@ angular.module('app')
 		replace: true,
 		scope: {
 			frontText: '=',
-			frontImg: '='
+			frontImg: '=',
+			backText: '='
 		},
 		link: function(scope, element, attrs) {
 
